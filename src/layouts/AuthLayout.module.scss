@@ -1,0 +1,78 @@
+@import '@/assets/css/variables.scss';
+@keyframes animation1 {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  30% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  60% {
+    transform: rotate3d(1, 0, 0, 0deg);
+  }
+
+  80% {
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+}
+@keyframes animation2 {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0);
+  }
+
+  30% {
+    transform: translateY(30px) translateX(30px) rotate(15deg);
+    transform-origin: center center;
+  }
+
+  50% {
+    transform: translateY(50px) translateX(50px) rotate(45deg);
+    transform-origin: right bottom;
+  }
+
+  80% {
+    transform: translateY(30px) translateX(30px) rotate(15deg);
+    transform-origin: left top;
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0) rotate(0);
+    transform-origin: center center;
+  }
+}
+
+@keyframes animation3 {
+  0%,
+  100% {
+    transform: perspective(400px) translateY(0) rotate(0deg) translateZ(0px)
+      translateX(0);
+  }
+
+  50% {
+    transform: perspective(400px) rotate(-45deg) translateZ(20px)
+      translateY(20px) translateX(20px);
+  }
+}
+
+.animation1 {
+  animation: animation1 5s ease-out infinite;
+}
+
+.animation2 {
+  animation: animation2 8s linear infinite;
+}
+.animation3 {
+  animation: animation3 9s linear infinite;
+}
+
+.container {
+  overflow: overlay;
+  @media screen and (min-width: 480px) {
+    overflow: hidden;
+  }
+}
